@@ -1,0 +1,5 @@
+export DB_USERNAME=
+export DB_PASSWORD=
+export DB_NAME_DEV=
+export DB_NAME_TEST=
+export DB_HOSTNAME=
