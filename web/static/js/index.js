@@ -22,5 +22,5 @@ export default class Root extends Component {
 }
 
 render(
-  <Root />, document.getElementById('root')
+  <Root counter={10}/>, document.getElementById('root')
 );

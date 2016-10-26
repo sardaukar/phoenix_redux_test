@@ -1,42 +1,31 @@
-export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
-export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
-export const SET_COUNTER = 'SET_COUNTER';
+import React, { Component, PropTypes } from 'react';
 
-export function setCounter(counter) {
-  return {
-    type: SET_COUNTER,
-    counter: counter
-  };
+class Counter extends Component {
+  render() {
+    const { increment, incrementIfOdd, incrementAsync, decrement, counter } = this.props;
+
+    return (
+      <p>
+        Clicked: {counter} times
+        {' '}
+        <button onClick={increment}>+</button>
+        {' '}
+        <button onClick={decrement}>-</button>
+        {' '}
+        <button onClick={incrementIfOdd}>Increment if odd</button>
+        {' '}
+        <button onClick={() => incrementAsync()}>Increment async</button>
+      </p>
+    );
+  }
 }
 
-export function increment() {
-  return {
-    type: INCREMENT_COUNTER
-  };
-}
+Counter.propTypes = {
+  increment: PropTypes.func.isRequired,
+  incrementIfOdd: PropTypes.func.isRequired,
+  incrementAsync: PropTypes.func.isRequired,
+  decrement: PropTypes.func.isRequired,
+  counter: PropTypes.number.isRequired
+};
 
-export function decrement() {
-  return {
-    type: DECREMENT_COUNTER
-  };
-}
-
-export function incrementIfOdd() {
-  return (dispatch, getState) => {
-    const { counter } = getState();
-
-    if (counter % 2 === 0) {
-      return;
-    }
-
-    dispatch(increment());
-  };
-}
-
-export function incrementAsync(delay = 1000) {
-  return dispatch => {
-    setTimeout(() => {
-      dispatch(increment());
-    }, delay);
-  };
-}
+export default Counter;
