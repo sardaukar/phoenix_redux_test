@@ -4,12 +4,12 @@ import { Provider } from 'react-redux';
 import CounterApp from './containers/counterApp';
 import configureStore from './store/configureStore';
 import {setCounter} from './actions/counter';
+import { configureChannel } from './channel';
 
 import {} from '../vendor/bootstrap.3.3.7.min.js';
 
-import { Socket } from 'phoenix';
-
 const store = configureStore();
+configureChannel(store);
 
 export default class Root extends Component {
   componentWillMount() {

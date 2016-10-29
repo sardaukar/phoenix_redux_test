@@ -42,7 +42,8 @@ module.exports = {
       path.join(__dirname, 'priv/static/css'),
     ],
     alias: {
-      phoenix: __dirname + './web/static/js/phoenix.js'
+      phoenix: __dirname + '/web/static/js/phoenix.js',
+      phoenix_html: __dirname + '/deps/phoenix_html/web/static/js/phoenix_html.js'
     }
   },
   module: {
