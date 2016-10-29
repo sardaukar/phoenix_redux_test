@@ -40,7 +40,10 @@ module.exports = {
     root: [
       path.join(__dirname, 'priv/static/js'),
       path.join(__dirname, 'priv/static/css'),
-    ]
+    ],
+    alias: {
+      phoenix: __dirname + './web/static/js/phoenix.js'
+    }
   },
   module: {
     loaders: [

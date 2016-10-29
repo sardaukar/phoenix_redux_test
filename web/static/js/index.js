@@ -6,7 +6,8 @@ import configureStore from './store/configureStore';
 import {setCounter} from './actions/counter';
 
 import {} from '../vendor/bootstrap.3.3.7.min.js';
-import * as Phoenix from './phoenix.js';
+
+import { Socket } from 'phoenix';
 
 const store = configureStore();
 
