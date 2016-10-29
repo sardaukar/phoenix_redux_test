@@ -27,7 +27,10 @@ module.exports = {
     filename: 'js/app.js'
   },
   resolve: {
-    modulesDirectories: [ "node_modules", __dirname + "/web/static/js" ]
+    modulesDirectories: [
+      "node_modules",
+      __dirname + "/web/static/js"
+    ]
   },
   module: {
     loaders: [
@@ -46,7 +49,6 @@ module.exports = {
             'css' + '!sass?outputStyle=expanded&' + stylePathResolves
           )
         }
-
     ]
   },
   plugins: plugins

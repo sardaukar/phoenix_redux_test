@@ -8,14 +8,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch": "webpack --watch-stdin --progress --color"
+    "watch": "webpack --watch-stdin --progress --color",
+    "build": "webpack -P"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "react": "^0.14.2",
     "react-redux": "^4.0.0",
-    "react-router": "^0.13.5",
     "redux": "^3.0.4",
     "redux-thunk": "^1.0.0"
   },
