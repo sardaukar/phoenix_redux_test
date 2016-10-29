@@ -16,3 +16,4 @@ erl_crash.dump
 /config/prod.secret.exs
 /.envrc
 /priv/static/js/app.js
+/priv/static/css/app.css
