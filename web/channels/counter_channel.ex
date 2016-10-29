@@ -10,7 +10,8 @@ defmodule PhoenixReactReduxSample.CounterChannel do
   def handle_in("counter:async", params, socket) do
     Logger.info "got async counter msg"
     broadcast! socket, "counter:incrementFromServer", %{
-      text: params["text"]
+      text: params["text"],
+      in_reply_to: params["rid"]
     }
 
     {:reply, :ok, socket}

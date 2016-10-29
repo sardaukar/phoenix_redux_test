@@ -2,6 +2,8 @@ import { Socket } from 'phoenix';
 import * as CounterActions from '../actions/counter';
 import * as WsActions from '../actions/websocket';
 
+import uuid from 'node-uuid';
+
 const socketMiddleware = (function(){
   var socket = null;
   var channel = null;
@@ -20,8 +22,7 @@ const socketMiddleware = (function(){
 
         socket = new Socket('/ws', {
           logger: (kind, msg, data) => {
-            console.log(`${kind.toUpperCase()} msg: ${msg}`);
-            console.log('data:', data);
+            console.log(`${kind.toUpperCase()} msg: ${msg}`, data);
           }
         });
 
@@ -49,7 +50,10 @@ const socketMiddleware = (function(){
 
       case CounterActions.INCREMENT_ON_SERVER:
         console.log('sending action to server...');
-        channel.push('counter:async', {text: 'meh'})
+        channel.push('counter:async', {
+          text: 'meh',
+          rid: uuid.v4()
+        })
           .receive('ok', _resp => {
             //
           })
