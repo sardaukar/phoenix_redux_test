@@ -2,6 +2,7 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import Counter from '../components/counter';
 import * as CounterActions from '../actions/counter';
+import * as WsActions from '../actions/websocket';
 
 function mapStateToProps(state) {
   return {
@@ -10,7 +11,10 @@ function mapStateToProps(state) {
 }
 
 function mapDispatchToProps(dispatch) {
-  return bindActionCreators(CounterActions, dispatch);
+  return bindActionCreators(
+    Object.assign({}, CounterActions, WsActions),
+    dispatch
+  );
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Counter);

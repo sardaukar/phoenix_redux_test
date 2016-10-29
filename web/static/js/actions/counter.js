@@ -1,4 +1,6 @@
 export const INCREMENT_COUNTER = 'INCREMENT_COUNTER';
+export const INCREMENT_COUNTER_FROM_SERVER = 'INCREMENT_COUNTER_FROM_SERVER';
+export const INCREMENT_ON_SERVER = 'INCREMENT_ON_SERVER';
 export const DECREMENT_COUNTER = 'DECREMENT_COUNTER';
 export const SET_COUNTER = 'SET_COUNTER';
 
@@ -12,6 +14,18 @@ export function setCounter(counter) {
 export function increment() {
   return {
     type: INCREMENT_COUNTER
+  };
+}
+
+export function incrementFromServer() {
+  return {
+    type: INCREMENT_COUNTER_FROM_SERVER
+  };
+}
+
+export function incrementOnServer() {
+  return {
+    type: INCREMENT_ON_SERVER
   };
 }
 
