@@ -7,7 +7,7 @@ import {} from '../vendor/bootstrap.3.3.7.min.js';
 import CounterApp from './containers/counterApp';
 import configureStore from './store/configureStore';
 import { setCounter } from './actions/counter';
-import { wsConnect, wsDisconnect } from './actions/websocket';
+import { wsConnect } from './actions/websocket';
 
 const store = configureStore();
 

@@ -37,7 +37,7 @@ const socketMiddleware = (function(){
           .receive('error', reason => console.log('failed join', reason))
           .receive('timeout', () => console.log('Networking issue. Still waiting...'));
 
-        break;
+        return next(action);
 
       case WsActions.DISCONNECT:
         if(socket != null) {
@@ -45,7 +45,7 @@ const socketMiddleware = (function(){
         }
         socket = null;
 
-        break;
+        return next(action);
 
       case CounterActions.INCREMENT_ON_SERVER:
         console.log('sending action to server...');
