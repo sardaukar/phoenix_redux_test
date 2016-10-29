@@ -5,7 +5,13 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var env = process.env.MIX_ENV || 'dev';
 var isProduction = (env === 'prod');
 
-var plugins = [new ExtractTextPlugin('css/app.css')];
+var plugins = [
+  new ExtractTextPlugin('css/app.css'),
+  new webpack.ProvidePlugin({
+    $: "jquery",
+    jQuery: "jquery"
+  })
+];
 
 // This is necessary to get the sass @import's working
 var stylePathResolves = (
@@ -28,8 +34,12 @@ module.exports = {
   },
   resolve: {
     modulesDirectories: [
-      "node_modules",
-      __dirname + "/web/static/js"
+      'node_modules',
+      __dirname + '/web/static/js'
+    ],
+    root: [
+      path.join(__dirname, 'priv/static/js'),
+      path.join(__dirname, 'priv/static/css'),
     ]
   },
   module: {
@@ -48,6 +58,10 @@ module.exports = {
             'style',
             'css' + '!sass?outputStyle=expanded&' + stylePathResolves
           )
+        },
+        {
+          test: /\.css$/,
+          loader: ExtractTextPlugin.extract('style','css')
         }
     ]
   },

@@ -17,3 +17,7 @@ erl_crash.dump
 /.envrc
 /priv/static/js/app.js
 /priv/static/css/app.css
+/priv/static/fonts/glyphicons-halflings-regular.eot
+/priv/static/fonts/glyphicons-halflings-regular.svg
+/priv/static/fonts/glyphicons-halflings-regular.ttf
+/priv/static/fonts/glyphicons-halflings-regular.woff

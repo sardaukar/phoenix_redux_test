@@ -8,13 +8,17 @@ class Counter extends Component {
       <p>
         Clicked: {counter} times
         {' '}
-        <button onClick={increment}>+</button>
+        <button className='btn btn-primary' onClick={increment}>+</button>
         {' '}
-        <button onClick={decrement}>-</button>
+        <button className='btn btn-danger' onClick={decrement}>-</button>
         {' '}
-        <button onClick={incrementIfOdd}>Increment if odd</button>
+        <button className='btn btn-warning' onClick={incrementIfOdd}>Increment if odd</button>
         {' '}
-        <button onClick={() => incrementAsync()}>Increment async</button>
+        <button className='btn btn-info' onClick={() => incrementAsync()}>Increment async</button>
+        {' '}
+        <button type="button" className="btn btn-primary" data-toggle="modal" data-target="#myModal">
+          modal
+        </button>
       </p>
     );
   }

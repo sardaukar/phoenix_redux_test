@@ -5,6 +5,8 @@ import CounterApp from './containers/counterApp';
 import configureStore from './store/configureStore';
 import {setCounter} from './actions/counter';
 
+import {} from '../vendor/bootstrap.3.3.7.min.js';
+
 const store = configureStore();
 
 export default class Root extends Component {
