@@ -1,7 +1,7 @@
 defmodule PhoenixReactReduxSample.Endpoint do
   use Phoenix.Endpoint, otp_app: :phoenix_react_redux_sample
 
-  socket "/ws", PhoenixReactReduxSample.TodoSocket
+  socket "/ws", PhoenixReactReduxSample.CounterSocket
 
   # Serve at "/" the static files from "priv/static" directory.
   #

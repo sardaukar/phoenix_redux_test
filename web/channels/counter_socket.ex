@@ -1,7 +1,7 @@
-defmodule PhoenixReactReduxSample.TodoSocket do
+defmodule PhoenixReactReduxSample.CounterSocket do
   use Phoenix.Socket
 
-  channel "todos:*", PhoenixReactReduxSample.TodoChannel
+  channel "counter:*", PhoenixReactReduxSample.CounterChannel
 
   transport :websocket, Phoenix.Transports.WebSocket
 
