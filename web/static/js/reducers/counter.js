@@ -14,7 +14,7 @@ export default function counter(state = 0, action) {
   case DECREMENT_COUNTER:
     return state - 1;
   case SET_COUNTER:
-    return action.counter;
+    return action.payload.counter;
   default:
     return state;
   }

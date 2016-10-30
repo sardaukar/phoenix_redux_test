@@ -7,7 +7,9 @@ export const SET_COUNTER = 'SET_COUNTER';
 export function setCounter(counter) {
   return {
     type: SET_COUNTER,
-    counter: counter
+    payload: {
+      counter: counter
+    }
   };
 }
 
