@@ -11,8 +11,9 @@ config :phoenix_react_redux_sample, PhoenixReactReduxSample.Endpoint,
   debug_errors: true,
   code_reloader: true,
   check_origin: false,
-  watchers: [npm: ["run", "watch"]]
-
+  watchers: [
+    npm: ["run", "watch"]
+  ]
 
 # Watch static and templates for browser reloading.
 config :phoenix_react_redux_sample, PhoenixReactReduxSample.Endpoint,
