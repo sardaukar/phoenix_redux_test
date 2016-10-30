@@ -7,7 +7,7 @@ import * as WsActions from '../actions/websocket';
 function mapStateToProps(state) {
   return {
     counter: state.counter
-  }
+  };
 }
 
 function mapDispatchToProps(dispatch) {
