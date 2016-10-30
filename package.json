@@ -2,6 +2,12 @@
   "name": "phoenix_react_redux_sample",
   "version": "0.0.1",
   "description": "To start your Phoenix app:",
+  "author": "",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/sardaukar/phoenix_redux_test.git"
+  },
   "main": "index.js",
   "directories": {
     "test": "test"
@@ -9,10 +15,12 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "watch": "webpack --watch-stdin --progress --color",
-    "build": "webpack -P"
+    "build": "webpack -P",
+    "lint": "eslint web/static/js"
   },
-  "author": "",
-  "license": "ISC",
+  "babel": {
+    "presets": ["es2015","react"]
+  },
   "dependencies": {
     "jquery": "^3.1.1",
     "node-uuid": "^1.4.7",
@@ -21,15 +29,18 @@
     "redux": "^3.0.4",
     "redux-thunk": "^1.0.0"
   },
-  "babel": {
-    "presets": ["es2015", "react"]
-  },
   "devDependencies": {
     "babel-core": "^6.1.2",
     "babel-loader": "^6.0.1",
     "babel-preset-es2015": "^6.1.2",
     "babel-preset-react": "^6.1.2",
     "css-loader": "^0.22.0",
+    "eslint": "^3.9.0",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-module-utils": "^1.0.0",
+    "eslint-plugin-import": "^1.16.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
     "extract-text-webpack-plugin": "^0.9.1",
     "node-libs-browser": "^0.5.3",
     "node-sass": "^3.4.1",
@@ -37,9 +48,5 @@
     "sass-loader": "^3.1.1",
     "style-loader": "^0.13.0",
     "webpack": "^1.12.2"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/sardaukar/phoenix_redux_test.git"
   }
 }
