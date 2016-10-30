@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, PropTypes } from 'react';
 import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
@@ -25,6 +25,10 @@ export default class Root extends Component {
     );
   }
 }
+
+Root.propTypes = {
+  counter: PropTypes.number.isRequired,
+};
 
 render(
   <Root counter={10}/>, document.getElementById('root')

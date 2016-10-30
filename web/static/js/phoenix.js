@@ -1,3 +1,4 @@
+/*eslint-disable*/
 (function(exports){
 "use strict";
 
@@ -1268,4 +1269,4 @@ var Timer = function () {
 }();
 
 })(typeof(exports) === "undefined" ? window.Phoenix = window.Phoenix || {} : exports);
-
+/*eslint-enable*/
